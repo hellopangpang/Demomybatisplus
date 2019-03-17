@@ -24,11 +24,17 @@ import java.io.IOException;
 @RequestMapping("/generator/fileinfo")
 public class FileinfoController extends BaseController {
 
-    private String basePath = "C:/home/demoupload";
+    private String basePath = "C:/home/file";
 
     @Autowired
     private FileinfoMapper mapper;
 
+    /**
+     * 文件上传
+     * @param file
+     * @return
+     * @throws IOException
+     */
     @RequestMapping("/upload")
     public Object upload(@RequestParam("file") MultipartFile file) throws IOException {
 

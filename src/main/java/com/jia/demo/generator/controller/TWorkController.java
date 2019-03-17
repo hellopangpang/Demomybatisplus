@@ -25,7 +25,6 @@ import java.util.List;
  * @author jiamj
  * @since 2019-02-13
  */
-@Api(value = "欢迎使用Swagger")
 @RestController
 @RequestMapping("/generator/t-work")
 public class TWorkController extends BaseController {
@@ -36,7 +35,6 @@ public class TWorkController extends BaseController {
     @Autowired
     private TWorkMapper mapper;
 
-    @ApiOperation(value = "添加", notes = "测试在线接口生成")
     @RequestMapping("/addwork")
     public Object add() {
         TWork work = new TWork();
@@ -46,7 +44,6 @@ public class TWorkController extends BaseController {
         return work;
     }
 
-    @ApiOperation(value = "查找", notes = "测试在线接口生成")
     @RequestMapping("/select")
     public Object test1() {
 
